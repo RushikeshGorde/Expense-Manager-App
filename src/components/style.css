@@ -5,7 +5,11 @@
 body{
   background-image: radial-gradient( circle farthest-corner at -14.3% -17.5%,  rgb(168, 240, 245) 4%, rgb(248, 164, 243) 100.2% );
 }
-
+h3{
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    
+}
 
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
