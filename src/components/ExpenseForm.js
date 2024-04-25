@@ -19,7 +19,7 @@ const ExpenseTracker = () => {
     date: '',
     amount: '',
     category: '',
-    description: '',
+   
     salary: ''
   });
 
@@ -32,13 +32,13 @@ const ExpenseTracker = () => {
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { month, date, amount, category, description, salary } = newExpense;
+    const { month, date, amount, category, salary } = newExpense;
 
     // Check if the month exists in expenses, if not, create an empty array
     setExpenses(prevExpenses => ({
       ...prevExpenses,
       [month]: {
-        expenses: [...(prevExpenses[month]?.expenses || []), { date, amount, category, description }],
+        expenses: [...(prevExpenses[month]?.expenses || []), { date, amount, category }],
         salary: salary || prevExpenses[month]?.salary // If salary is not provided, use previous salary value
       }
     }));
@@ -49,7 +49,7 @@ const ExpenseTracker = () => {
       date: '',
       amount: '',
       category: '',
-      description: '',
+     
       salary: ''
     });
   };
@@ -109,9 +109,7 @@ const ExpenseTracker = () => {
                 <div className="mb-3">
                   <input type="text" className="form-control" name="category" value={newExpense.category} onChange={handleInputChange} placeholder="Category" />
                 </div>
-                <div className="mb-3">
-                  <input type="text" className="form-control" name="description" value={newExpense.description} onChange={handleInputChange} placeholder="Description" />
-                </div>
+               
 
                 <button className='text-light btn btn-outline-danger' type="submit">Add Expense</button>
               </form>
@@ -127,7 +125,7 @@ const ExpenseTracker = () => {
                         <th>Date</th>
                         <th>Amount</th>
                         <th>Category</th>
-                        <th>Description</th>
+
                       </tr>
                     </thead>
                     <tbody>
@@ -136,7 +134,7 @@ const ExpenseTracker = () => {
                           <td>{expense.date}</td>
                           <td>{expense.amount}</td>
                           <td>{expense.category}</td>
-                          <td>{expense.description}</td>
+                         
                         </tr>
                       ))}
                     </tbody>
