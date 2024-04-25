@@ -3,7 +3,7 @@
   padding: 0px;
 }
 body{
-    background: radial-gradient(at 0% 30%, red 10px, yellow 30%, #1e90ff 50%);
+  background-image: radial-gradient( circle farthest-corner at -14.3% -17.5%,  rgb(168, 240, 245) 4%, rgb(248, 164, 243) 100.2% );
 }
 h3{
     font-family: "Lora", serif;
