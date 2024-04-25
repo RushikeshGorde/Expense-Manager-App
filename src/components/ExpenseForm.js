@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import './Expense.css'; // Import your custom CSS file
+import './style.css'; // Import your custom CSS file
 
 const ExpenseTracker = () => {
 
